@@ -1,0 +1,37 @@
+class student {
+    constructor(code, name, date, mathScore, litScore, engScore, totalScore) {
+        this.code = code;
+        this.name = name;
+        this.date = date; 
+        this.mathScore = mathScore; 
+        this.litScore = litScore;
+        this.engScore = engScore;
+        this.totalScore = parseInt(mathScore) + parseInt(litScore) + parseInt(engScore);
+    }
+    get getTotalScore() {
+        return this.totalScore;
+    }
+}
+
+    let number = prompt("Nhap so hoc sinh muon dien");
+    const students = [];
+    for (i = 0; i < number; i++){
+        students[i] = new student(
+            prompt("Nhap ma hoc sinh thu" + " " + (i+1)), 
+            prompt("Nhap ten cua hoc sinh thu" + " " + (i+1)), 
+            prompt("Nhap ngay thang nam sinh cua hoc sinh thu" + " " + (i+1)), 
+            prompt("Nhap diem toan cua hoc sinh thu" + " " + (i+1)),
+            prompt("Nhap diem van cua hoc sinh thu" + " " + (i+1)),
+            prompt("Nhap diem tieng anh cua hoc sinh thu" + " " + (i+1)))
+    };
+    
+    for (i=0; i < number; i++){
+        if (students[i].getTotalScore > 15){
+            console.log(students[i]);
+        }
+    }
+
+
+   
+
+
