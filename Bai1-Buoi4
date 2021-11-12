@@ -1,0 +1,36 @@
+class phanSo {
+    constructor(tuSo, mauSo) {
+        this.tuSo = tuSo;
+        this.mauSo = mauSo;
+    }
+
+    static calcSum(a,b) {
+        const sum = (a.tuSo * b.mauSo + b.tuSo * a.mauSo)/(a.mauSo * b.mauSo);
+        return sum; 
+    }
+    
+    static calcDif(a,b) {
+        const dif = (a.tuSo * b.mauSo - b.tuSo * a.mauSo)/(a.mauSo * b.mauSo);
+        return dif;
+    }
+
+    static calcPro(a,b) {
+        const pro = (a.tuSo * b.tuSo)/(a.mauSo * b.mauSo);
+        return pro;
+    }
+
+    static calcQuo(a,b) {
+        const quo = (a.tuSo * b.mauSo)/(a.mauSo * b.tuSo);
+        return quo;
+    }
+}
+
+    const fraction1 = new phanSo(prompt("Nhap tu so cua phan so thu nhat"), prompt("Nhap mau so cua       phan so thu nhat"));
+    const fraction2 = new phanSo(prompt("Nhap tu so cua phan so thu hai"), prompt("Nhap mau so cua         phan so thu hai"));
+
+    console.log(fraction1);
+    console.log(fraction2);
+    console.log(phanSo.calcSum(fraction1, fraction2));
+    console.log(phanSo.calcDif(fraction1, fraction2));
+    console.log(phanSo.calcPro(fraction1, fraction2));
+    console.log(phanSo.calcQuo(fraction1, fraction2));
